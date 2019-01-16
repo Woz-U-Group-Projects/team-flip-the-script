@@ -1,0 +1,7 @@
+{
+  "name": "wealth-builder-app",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}
