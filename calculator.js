@@ -4,18 +4,6 @@
 function add(a, b) {
   return a + b;
 }
-/*
-// Arrow function test: Won't work for what I want it to; 
-// I need to be able to use the results elsewhere, and I 
-// need it to be compatible with other browsers. It works
-// as an example of how arrow functions work! I may need
-// this later, so I'm keeping it commented out for now.
-const add1 = (a,b) => {
-    a + b
-    console.log(a+b);
-};
-add1(1, 2);
-*/
 //------------------------------------------------------------------------------------
 //------------------------------------------------------------------------------------
 //------------------------------------------------------------------------------------
@@ -46,19 +34,19 @@ var health = [0];
 //------------------------------------------------------------------------------------
 
 //income Total:
-var iT = income.reduce(add, 0);
+const iT = income.reduce(add, 0);
 //Expense Living Total:
-var elT = living.reduce(add, 0);
+const elT = living.reduce(add, 0);
 //Expense Debt Total:
-var edT = debt.reduce(add, 0);
+const edT = debt.reduce(add, 0);
 //Expense Experiences total:
-var eeT = experiences.reduce(add, 0);
+const eeT = experiences.reduce(add, 0);
 //Expense Transportation total:
-var etT = transportation.reduce(add, 0);
+const etT = transportation.reduce(add, 0);
 //Expense Wealthbuilding total:
-var ewT = wealthbuilding.reduce(add, 0);
+const ewT = wealthbuilding.reduce(add, 0);
 //Expense Health total:
-var ehT = health.reduce(add, 0);
+const ehT = health.reduce(add, 0);
 //Expense Grand Total:
 const Expense = (elT + edT + edT + eeT + etT + ewT + ehT);
 
@@ -71,3 +59,56 @@ console.log("Total Transportation Expenses are " + etT);
 console.log("Total Wealthbuilding Expenses are " + ewT);
 console.log("Total Health Expenses are " + ehT);
 console.log("Total Expenses are: " + Expense);
+//------------------------------------------------------------------------------------
+//------------------------------------------------------------------------------------
+//------------------------------------------------------------------------------------
+//------------------------------------------------------------------------------------
+//------------------------------------------------------------------------------------
+
+var jstoday = new Date();
+// console.log("Today's date is " + today + " and the day is " + stringDay );
+//So this works, so long as "a" parameter entered is a javascript date format
+function readableDate(a){
+  var dd = a.getDate();
+  var mm = a.getMonth() + 1; //January is 0!
+  var yyyy = a.getFullYear();
+  var day = a.getDay();//Sunday is 0
+  var readableDate;
+  var stringDay;
+  if (dd < 10) {
+    dd = '0' + dd;
+  }
+  if (mm < 10) {
+    mm = '0' + mm;
+  }
+  readableDate = mm + '/' + dd + '/' + yyyy;
+  if (day === 0) {
+    stringDay = "Sunday";
+  }
+  if (day === 1) {
+    stringDay = "Monday";
+  }
+  if (day === 2) {
+    stringDay = "Tuesday";
+  }
+  if (day === 3) {
+    stringDay = "Wednesday";
+  }
+  if (day === 4) {
+    stringDay = "Thursday";
+  }
+  if (day === 5) {
+    stringDay = "Friday";
+  }
+  if (day === 6) {
+    stringDay = "Saturday";
+  }
+  console.log("The date is " + readableDate + ", and the day of the week is " + stringDay);
+return stringDay + readableDate;
+}
+var plusTwoWeeks = new Date(+new Date + 12096e5);
+console.log(plusTwoWeeks); //this gives a date two weeks from today in JS format
+readableDate(jstoday);
+readableDate(plusTwoWeeks);
+var d = new Date(2018, 11, 24);
+console.log(d);
