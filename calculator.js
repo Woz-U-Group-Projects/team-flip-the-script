@@ -110,5 +110,5 @@ var plusTwoWeeks = new Date(+new Date + 12096e5);
 console.log(plusTwoWeeks); //this gives a date two weeks from today in JS format
 readableDate(jstoday);
 readableDate(plusTwoWeeks);
-var d = new Date(2018, 11, 24);
+var d = new Date(2018, 11, 4);
 console.log(d);
