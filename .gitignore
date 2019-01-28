@@ -11,24 +11,9 @@ log.txt
 *.sublime-workspace
 .vscode/
 npm-debug.log*
-
-.idea/
-.ionic/
-.sourcemaps/
-.sass-cache/
-.tmp/
-.versions/
-coverage/
-dist/
+.DS_Store
 node_modules/
-tmp/
-temp/
-platforms/
-plugins/
-plugins/android.json
-plugins/ios.json
-www/
-$RECYCLE.BIN/
+
 
 .DS_Store
 Thumbs.db
