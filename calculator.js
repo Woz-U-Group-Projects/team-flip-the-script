@@ -106,6 +106,7 @@ function readableDate(a){
   console.log("The date is " + readableDate + ", and the day of the week is " + stringDay);
 return stringDay + readableDate;
 }
+//make this a function with a 
 var plusTwoWeeks = new Date(+new Date + 12096e5);
 console.log(plusTwoWeeks); //this gives a date two weeks from today in JS format
 readableDate(jstoday);
