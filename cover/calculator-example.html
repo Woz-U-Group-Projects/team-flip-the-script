@@ -1,0 +1,81 @@
+```<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <link rel="stylesheet" type="text/css" href="css/calculator.css">
+        <title>Calculator</title>
+    </head>
+    <body onload="registerEventHandlers()">
+        <div id="deviceready">
+            <div id="calculator">
+                <input type="text" id="display">
+                <input class='key' type="button" id="seven" value="7">
+                <input class='key' type="button" id="eight" value="8">
+                <input class='key' type="button" id="nine" value="9">
+                <input class='key' type="button" id="divide" value="/">
+                <input class='key' type="button" id="four" value="4">
+                <input class='key' type="button" id="five" value="5">
+                <input class='key' type="button" id="six" value="6">
+                <input class='key' type="button" id="multiply" value="*">
+                <input class='key' type="button" id="one" value="1">
+                <input class='key' type="button" id="two" value="2">
+                <input class='key' type="button" id="three" value="3">
+                <input class='key' type="button" id="subtract" value="-">
+                <input class='key' type="button" id="zero" value="0">
+                <input class='key' type="button" id="point" value=".">
+                <input class='key' type="button" id="clear" value="Clear">
+                <input class='key' type="button" id="add" value="+">
+                <input class='key' type="button" id="equals" value="=">
+            </div>
+        </div>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript" src="js/calculator.js"></script>
+    </body>
+</html>
+While editing the application code in Visual Studio Code, create a calculator.js file. Add your calculator.js file to your www/js folder. Add the following code snippet content to your calculator.js file.
+
+calculator.js file:
+
+function registerEventHandlers() {
+  zero.addEventListener("click", buttonInputClickHandler, false);
+  one.addEventListener("click", buttonInputClickHandler, false);
+  two.addEventListener("click", buttonInputClickHandler, false);
+  three.addEventListener("click", buttonInputClickHandler, false);
+  four.addEventListener("click", buttonInputClickHandler, false);
+  five.addEventListener("click", buttonInputClickHandler, false);
+  six.addEventListener("click", buttonInputClickHandler, false);
+  seven.addEventListener("click", buttonInputClickHandler, false);
+  eight.addEventListener("click", buttonInputClickHandler, false);
+  nine.addEventListener("click", buttonInputClickHandler, false);
+  add.addEventListener("click", buttonInputClickHandler, false);
+  subtract.addEventListener("click", buttonInputClickHandler, false);
+  multiply.addEventListener("click", buttonInputClickHandler, false);
+  divide.addEventListener("click", buttonInputClickHandler, false);
+  point.addEventListener("click", buttonInputClickHandler, false);
+  equals.addEventListener("click", buttonEqualsClickHandler, false);
+  clear.addEventListener("click", buttonClearClickHandler, false);
+}
+
+// handle click event for buttons that enter and display input
+function buttonInputClickHandler(eventArg) {
+  var display = document.getElementById("display");
+  display.value = display.value + eventArg.target.value;
+}
+
+// handle click event for equals button that evaluates and displays result
+function buttonEqualsClickHandler(eventArg) {
+  var display = document.getElementById("display");
+  display.value = eval(display.value);
+}
+
+// handle click event for clearing display
+function buttonClearClickHandler(eventArg) {
+  var display = document.getElementById("display");
+  display.value = "";
+}
+```
