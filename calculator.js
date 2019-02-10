@@ -14,19 +14,19 @@ idk, we'll see how the app comes together
 */
 
 //Income category
-var income = [500, 500, 400];
+var income = [];
 //Household expense category
-var living = [300, 50, 150, 50];
+var living = [];
 //Debt expense category
-var debt = [335, 28, 46, 76, 32];
+var debt = [];
 //Experiences expense category
-var experiences = [60];
+var experiences = [];
 // Transportation expense category
-var transportation = [40, 40, 245, 120];
+var transportation = [];
 //Wealthbuilding expense category
-var wealthbuilding = [200];
+var wealthbuilding = [];
 //Health expense category
-var health = [0];
+var health = [];
 //------------------------------------------------------------------------------------
 //------------------------------------------------------------------------------------
 //------------------------------------------------------------------------------------
