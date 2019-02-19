@@ -6,6 +6,15 @@ const logger = require('morgan');
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
 const inputRouter = require('./routes/input');
+//setting up routes for the categories
+const incomeRouter = require('./routes/income');
+const livingRouter = require('./routes/living');
+const transportationRouter = require('./routes/transportation');
+const experiencesRouter = require('./routes/experiences');
+const healthRouter = require('./routes/health');
+const debtRouter = require('./routes/debt');
+const wealthbuildingRouter = require('./routes/wealthbuilding');
+
 
 const app = express();
 
@@ -23,6 +32,15 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/input', inputRouter);
+//routes for the categories
+app.use('/income', incomeRouter);
+app.use('/living', livingRouter);
+app.use('/transportation', transportationRouter);
+app.use('/experiences', experiencesRouter);
+app.use('/health', healthRouter);
+app.use('/debt', debtRouter);
+app.use('/wealthbuilding', wealthbuildingRouter);
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
