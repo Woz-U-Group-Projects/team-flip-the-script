@@ -42,7 +42,7 @@ body {
 
 
 .background-image {
-   background-color: darkgray;
+   background-color:(gray,gray,darkgray);
    background-image: url('/images/man-glasses-laptop.jpg');
    background-size: cover;
    background-repeat: no-repeat;
