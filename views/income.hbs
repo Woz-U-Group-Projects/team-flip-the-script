@@ -1,6 +1,3 @@
-
-
-
 <h1>{{{title}}}</h1>
 
 <div class="container">
@@ -19,10 +16,21 @@
       <div class="col-xs-2">
         <label for="occur">Occurrence</label>
         <input class="form-control" id="occur" type="text">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+            <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">One-time</a></li>
+              <li><a href="#">Daily</a></li>
+              <li><a href="#">Weekly</a></li>
+            </ul>
       </div>
       <div class="col-xs-2">
         <label for="date">Date</label>
         <input class="form-control" id="date" type="date">
+      </div>
+      <div class="col-xs-2">
+        <label for="describe">Description</label>
+        <input class="form-control" id="describe" type="text">
       </div>
 
     </div>
@@ -30,38 +38,6 @@
 </div>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-CREATE FORM HERE 
-
-
-Name:  [Name of item]
-Amount: [Number] 
-Occurrence: DROPDOWN 
-            One-Time
-            Daily
-            Weekly
-            Biweekly 
-            Twice a Month
-            Monthly
-Quarterly
-            Annually
-Date: [date, or day of the week]
 
 
 
