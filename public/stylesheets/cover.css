@@ -21,9 +21,7 @@ a:hover {
   border: 3px solid black;
 }
 
-.dropdown-menu {
-  color: black
-}
+
 
 
 /*
@@ -35,7 +33,9 @@ body {
   height: 100%;
   /* background-color: rgb(0,0,0); */
 }
-
+.dropdown-menu {
+  background-color: transparent;
+}
 body {
   color: white;
   text-align: center;
