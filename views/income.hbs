@@ -1,19 +1,45 @@
 <h1>{{{title}}}</h1>
 
+<div class="container">
+  <h2></h2>
+  <p></p>
+  <form action="/income/additem" method="post">
+    <div class="col-xs-2">
+        <label for="occur">Occurrence</label>
+        
+<select>
+  <option value="One-time">One-time</option>
+  <option value="Daily">Daily</option>
+  <option value="Weekly">Weekly</option>
+  <option value="Biweekly">Biweekly</option>
+  <option value="Twice a Month">Twice a month</option>
+  <option value="Monthly">Monthly</option>
+  <option value="Quarterly">Quarterly</option>
+  <option value="Annually">Annually</option>
+</select>
+      <div class="col-xs-2">
+        <label for="income">Name (source of income)</label>
+        <input class="form-control" id="income" type="text">
+      </div>
+      <div class="col-xs-2">
+        <label for="dollar">Amount</label>
+        <input class="form-control" id="dollar" type="number">
+      </div>
+      <div class="col-xs-2">
+        <label for="date">Date</label>
+        <input class="form-control" id="date" type="date">
+      </div>
+      <div class="col-xs-2">
+        <label for="write">Description</label>
+        <input class="form-control" id="write" type="text">
+      </div>
+    </div>
+    <input type="submit" value="Submit">
+  </form>
+</div>
 
-CREATE FORM HERE 
 
 
-Name:  [Name of item]
-Amount: [Number] 
-Occurrence: DROPDOWN 
-            One-Time
-            Daily
-            Weekly
-            Biweekly 
-            Twice a Month
-            Monthly
-Quarterly
-            Annually
-Date: [date, or day of the week]
-Description: [Optional, for client]
+
+
+
