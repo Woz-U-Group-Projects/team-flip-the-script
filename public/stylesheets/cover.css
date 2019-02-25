@@ -35,6 +35,8 @@ body {
 }
 .dropdown-menu {
   background-color: transparent;
+  line-height: 2;
+  font-size: 2rem;
 }
 body {
   color: white;
@@ -132,6 +134,7 @@ body {
 }
 
 
+
 /*
  * Cover
  */
@@ -140,7 +143,7 @@ body {
   padding: 0 20px;
 }
 
-.cover .btn-lg {
+.cover .btn-xs {
   padding: 10px 20px;
   font-weight: normal;
 }
