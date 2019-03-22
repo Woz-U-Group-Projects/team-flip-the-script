@@ -13,20 +13,46 @@ function add(a, b) {
 idk, we'll see how the app comes together
 */
 
+//income: 0
+//living: 1
+//transportation: 2
+//experiences: 3
+//health: 4
+//debt: 5
+//wealthbuilding: 6
+
+function Category(name,numberValue){
+this.name = name;
+this.numberValue = numberValue;
+this.expense = 1;
+}
+const income = new Category(Income,0){
+  this.expense = 0;
+}
+
+//constructor for items
+function Item(category,name,date,amount){
+  this.category = category;
+  this.name = name;
+  this.date = date;
+  this.dateEntered = Date();
+  this.amount = amount;
+  this.deleted = 0;
+}
 //Income category
-var income = [];
-//Household expense category
-var living = [];
-//Debt expense category
-var debt = [];
-//Experiences expense category
-var experiences = [];
-// Transportation expense category
-var transportation = [];
-//Wealthbuilding expense category
-var wealthbuilding = [];
-//Health expense category
-var health = [];
+// var income = [];
+// //Household expense category
+// var living = [];
+// //Debt expense category
+// var debt = [];
+// //Experiences expense category
+// var experiences = [];
+// // Transportation expense category
+// var transportation = [];
+// //Wealthbuilding expense category
+// var wealthbuilding = [];
+// //Health expense category
+// var health = [];
 //------------------------------------------------------------------------------------
 //------------------------------------------------------------------------------------
 //------------------------------------------------------------------------------------
