@@ -4,7 +4,6 @@ const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const indexRouter = require('./routes/index');
-const usersRouter = require('./routes/users');
 const inputRouter = require('./routes/input');
 //setting up routes for the categories
 const incomeRouter = require('./routes/income');
@@ -14,8 +13,13 @@ const experiencesRouter = require('./routes/experiences');
 const healthRouter = require('./routes/health');
 const debtRouter = require('./routes/debt');
 const wealthbuildingRouter = require('./routes/wealthbuilding');
+const itemRouter = require('./routes/item');
+const userRouter = require('./routes/user');
+const mongoose = require('mongoose');//requiring mongoose for the app
 
-
+mongoose.connect('mongodb://localhost/wbTest', {//defining the database
+  useNewUrlParser: true
+});
 const app = express();
 
 // view engine setup
@@ -28,9 +32,8 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-
+//TODO: See if this can be condensed or modulated (after presentation)
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
 app.use('/input', inputRouter);
 //routes for the categories
 app.use('/income', incomeRouter);
@@ -40,6 +43,8 @@ app.use('/experiences', experiencesRouter);
 app.use('/health', healthRouter);
 app.use('/debt', debtRouter);
 app.use('/wealthbuilding', wealthbuildingRouter);
+app.use('/item', itemRouter);
+app.use('/user', userRouter);
 
 
 // catch 404 and forward to error handler
