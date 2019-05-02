@@ -13,8 +13,8 @@ const experiencesRouter = require('./routes/experiences');
 const healthRouter = require('./routes/health');
 const debtRouter = require('./routes/debt');
 const wealthbuildingRouter = require('./routes/wealthbuilding');
-const itemRouter = require('./routes/item');
-const userRouter = require('./routes/user');
+const itemRouter = require('./routes/items');
+const userRouter = require('./routes/user'); // TODO: uncomment this when building in user access
 const mongoose = require('mongoose');//requiring mongoose for the app
 
 mongoose.connect('mongodb://localhost/wbTest', {//defining the database
@@ -43,7 +43,7 @@ app.use('/experiences', experiencesRouter);
 app.use('/health', healthRouter);
 app.use('/debt', debtRouter);
 app.use('/wealthbuilding', wealthbuildingRouter);
-app.use('/item', itemRouter);
+app.use('/items', itemRouter);
 app.use('/user', userRouter);
 
 

@@ -9,14 +9,14 @@ const itemSchema = mongoose.Schema({
     createdOn:{type: Date, default:Date.now, required: true},
     lastModified:{type: Date, default: Date.now, required: true},
     categoryID:{type:Number, required:true},
-    userID: {
+ /*   userID: {// TODO: Undo this comment when working when validation is implemented 
         type: mongoose.Schema.Types.ObjectId,
         ref: 'User',
         required: true,
         default: "5ca3e863f9833868503b4ed9"
-    }, // TODO: Make this a valid OID
+    }, */ 
+    // TODO: Make this a valid OID
     // TODO: Create a models/user.js file for the data in userID
-    isExpense:{type:Boolean, required:true},// TODO: Make this default to true in the form
     isDeleted: {type:Boolean, default:false, required: true}
 });
 
